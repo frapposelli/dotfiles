@@ -1,0 +1,14 @@
+"*":
+  "exception-reporting":
+    userId: "4f4a6974-1da8-cb33-4a12-f7a30e6a71ad"
+  welcome:
+    showOnStartup: false
+  core: {}
+  editor:
+    invisibles: {}
+    fontSize: 12
+    fontFamily: "Menlo for Powerline"
+  linter:
+    statusBar: "Show error of the selected line"
+  "linter-shellcheck":
+    shellcheckExecutablePath: "/usr/local/bin/shellcheck"
