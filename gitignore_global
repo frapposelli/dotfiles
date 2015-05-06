@@ -1,0 +1,39 @@
+### OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+### Temp files
+*~
+.vagrant
+Gemfile.lock
+node_modules
+*.log
+
+### db files
+*.sql
+*.sqlite
+
+### compiled stuff
+*.class
+*.o
+*.so
+
+### archives
+*.jar
+*.dmg
+*.iso
+*.rar
+*.tar
+*.gz
+*.zip
+*.7z
+
+### test files
+frapposelli-test.*
+

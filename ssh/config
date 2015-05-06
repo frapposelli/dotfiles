@@ -1,0 +1,20 @@
+Host *
+    controlpath /tmp/ssh_mux_%h_%p_%r
+    controlmaster auto
+    forwardagent yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
+Host git.eng.vmware.com
+    identityfile ~/.ssh/id_rsa_vmware
+Host discourse-dev
+    hostname 10.250.0.171
+    user admin
+    port 22
+Host c2811-wan
+    hostname 10.250.254.254
+    user admin
+    port 22
+Host deepthought
+    hostname 10.250.0.137
+    user root
+    port 22

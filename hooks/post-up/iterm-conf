@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Copying iTerm2 configuration in the right place.
+cp "$HOME/.dotfiles/.com.googlecode.iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
+# Invalidate cached plist
+defaults read com.googlecode.iterm2 > /dev/null
