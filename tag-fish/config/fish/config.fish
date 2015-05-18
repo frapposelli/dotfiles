@@ -1,4 +1,6 @@
-set -gx PATH ~/.bin $PATH
+set -gx GOPATH ~/Development/goworkspace
+
+set -gx PATH ~/.bin $GOPATH/bin $PATH
 
 set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 
