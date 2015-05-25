@@ -6,9 +6,11 @@
   core: {}
   editor:
     invisibles: {}
-    fontSize: 12
     fontFamily: "Menlo for Powerline"
+    fontSize: 13
   linter:
     statusBar: "Show error of the selected line"
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/local/bin/shellcheck"
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
