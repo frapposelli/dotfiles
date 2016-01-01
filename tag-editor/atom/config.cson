@@ -33,3 +33,4 @@
   "linter-write-good": {}
   "markdown-pdf": {}
   "linter-docker": {}
+  "go-rename": {}
