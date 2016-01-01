@@ -1,1 +1,0 @@
-/Users/frapposelli/.dotfiles/tag-editor/atom/packages/README.md

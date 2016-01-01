@@ -7,10 +7,29 @@
   editor:
     invisibles: {}
     fontFamily: "Menlo for Powerline"
-    fontSize: 13
+    showInvisibles: true
+    showIndentGuide: true
+    fontSize: 12
   linter:
     statusBar: "Show error of the selected line"
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/local/bin/shellcheck"
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
+  "linter-rubocop":
+    command: "/usr/local/var/rbenv/shims/rubocop"
+  "go-plus":
+    goPath: "~/Development/goworkspace"
+    formatTool: "gofmt"
+    lintOnSave: false
+  minimap:
+    plugins:
+      linter: true
+      "find-and-replace": true
+  "highlight-line":
+    enableSelectionBorder: true
+    underline: "dashed"
+    hideHighlightOnSelect: true
+  "linter-write-good": {}
+  "markdown-pdf": {}
+  "linter-docker": {}
