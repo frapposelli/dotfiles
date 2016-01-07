@@ -29,7 +29,7 @@ function fish_prompt
 
   # Display hostname if connected to SSH
   if set -q SSH_CONNECTION
-      echo -n -s $yellow (hostname) $normal ' '
+      echo -n -s $yellow $USER '@' (hostname) $normal ' '
   end
   
   # Display [venvname] if in a virtualenv
