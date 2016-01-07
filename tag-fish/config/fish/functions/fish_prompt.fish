@@ -26,6 +26,11 @@ function fish_prompt
   set -l normal (set_color normal)
 
   set -l cwd $blue(basename (pwd | sed "s:^$HOME:~:"))
+
+  # Display hostname if connected to SSH
+  if set -q SSH_CONNECTION
+      echo -n -s $yellow (hostname) $normal ' '
+  end
   
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
