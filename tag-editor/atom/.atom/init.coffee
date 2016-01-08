@@ -1,1 +1,0 @@
-/Users/frapposelli/.dotfiles/tag-editor/atom/init.coffee

@@ -8,9 +8,27 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
+ // style the background color of the tree view
+ .tree-view {
+     font-size: 12px;
+ }
 
-}
+ .list-group li:not(.list-nested-item),
+ .list-tree li:not(.list-nested-item),
+ .list-group li.list-nested-item > .list-item,
+ .list-tree li.list-nested-item > .list-item {
+     line-height:18px;
+ }
+
+ .list-group .selected:before,
+ .list-tree .selected:before {
+     height:18px;
+ }
+
+ .list-tree.has-collapsable-children .list-nested-item > .list-tree > li,
+ .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+     padding-left:12px;
+ }
 
 // style the background and foreground colors on the atom-text-editor-element
 // itself
@@ -22,4 +40,44 @@ atom-text-editor {
 // expression
 atom-text-editor::shadow .cursor {
 
+}
+
+.symbols-view {
+  &.select-list ol.list-group li .primary-line,
+  &.select-list ol.list-group li .secondary-line {
+
+    // font-family: Menlo for Powerline;
+    font-size: 14px;
+
+    // let lines wrap
+    text-overflow: initial;
+    white-space: initial;
+    overflow: initial;
+
+    // reduce line-height
+    line-height: 1.0em;
+    padding-top: .1em;
+    padding-bottom: .0em;
+
+    // make sure wrapped lines get padding
+    // padding-left: 21px;
+    &.icon:before {
+      margin-left: -21px;
+    }
+
+    .character-match {
+        color: rgb(200, 200, 10) !important;
+    }
+  }
+}
+
+.symbols-view {
+  &.select-list ol.list-group li .secondary-line {
+      float: right;
+      margin-top: -12px;
+      padding-top: 0em;
+      padding-bottom: 0em;
+      font-size: 12px;
+      color: rgba(200, 200, 10, 0.8) !important;
+  }
 }

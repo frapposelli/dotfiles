@@ -22,7 +22,7 @@ local arqStatusDot = nil
 -- Define some keyboard modifier variables
 -- (Node: Capslock bound to cmd+alt+ctrl+shift via Seil and Karabiner)
 local alt = {"⌥"}
-local hyper = {"⌘", "⌥", "⌃", "⇧"}
+local hyper = {"⌘", "⌥", "⌃"}
 
 -- Define monitor names for layout purposes
 local display_laptop = "Color LCD"
@@ -351,23 +351,23 @@ end
 -- hs.urlevent.bind('hyperfnleft', function() hs.window.focusedWindow():moveOneScreenWest() end)
 -- hs.urlevent.bind('hyperfnright', function() hs.window.focusedWindow():moveOneScreenEast() end)
 --
--- -- Hotkeys to resize windows absolutely
--- hs.hotkey.bind(hyper, 'a', function() hs.window.focusedWindow():moveToUnit(hs.layout.left30) end)
--- hs.hotkey.bind(hyper, 's', function() hs.window.focusedWindow():moveToUnit(hs.layout.right70) end)
--- hs.hotkey.bind(hyper, '[', function() hs.window.focusedWindow():moveToUnit(hs.layout.left50) end)
--- hs.hotkey.bind(hyper, ']', function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end)
--- hs.hotkey.bind(hyper, 'f', toggle_window_maximized)
--- hs.hotkey.bind(hyper, 'r', function() hs.window.focusedWindow():toggleFullScreen() end)
+-- Hotkeys to resize windows absolutely
+hs.hotkey.bind(hyper, 'a', function() hs.window.focusedWindow():moveToUnit(hs.layout.left30) end)
+hs.hotkey.bind(hyper, 's', function() hs.window.focusedWindow():moveToUnit(hs.layout.right70) end)
+hs.hotkey.bind(hyper, 'è', function() hs.window.focusedWindow():moveToUnit(hs.layout.left50) end)
+hs.hotkey.bind(hyper, '+', function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end)
+hs.hotkey.bind(hyper, 'f', toggle_window_maximized)
+hs.hotkey.bind(hyper, 'r', function() hs.window.focusedWindow():toggleFullScreen() end)
 --
 -- -- Hotkeys to trigger defined layouts
 -- hs.hotkey.bind(hyper, '1', function() hs.layout.apply(internal_display) end)
 -- hs.hotkey.bind(hyper, '2', function() hs.layout.apply(dual_display) end)
 --
 -- -- Hotkeys to interact with the window grid
--- hs.hotkey.bind(hyper, 'Left', hs.grid.pushWindowLeft)
--- hs.hotkey.bind(hyper, 'Right', hs.grid.pushWindowRight)
--- hs.hotkey.bind(hyper, 'Up', hs.grid.pushWindowUp)
--- hs.hotkey.bind(hyper, 'Down', hs.grid.pushWindowDown)
+hs.hotkey.bind(hyper, 'Left', hs.grid.pushWindowLeft)
+hs.hotkey.bind(hyper, 'Right', hs.grid.pushWindowRight)
+hs.hotkey.bind(hyper, 'Up', hs.grid.pushWindowUp)
+hs.hotkey.bind(hyper, 'Down', hs.grid.pushWindowDown)
 --
 -- hs.urlevent.bind('hypershiftleft', hs.grid.resizeWindowThinner)
 -- hs.urlevent.bind('hypershiftright', hs.grid.resizeWindowWider)
@@ -399,8 +399,8 @@ end
 -- -- Misc hotkeys
 -- hs.hotkey.bind(hyper, 'y', hs.toggleConsole)
 -- hs.hotkey.bind(hyper, 'n', function() os.execute("open ~") end)
--- hs.hotkey.bind(hyper, 'c', caffeineClicked)
--- hs.hotkey.bind(hyper, 'Escape', toggle_audio_output)
+hs.hotkey.bind(hyper, 'c', caffeineClicked)
+-- hs.hotkey.bind(hyper, 'Escape', toggle_audi-o_output)
 -- hs.hotkey.bind(hyper, 'm', toggleSkypeMute)
 -- hs.hotkey.bind(hyper, 'd', mouseHighlight)
 -- hs.hotkey.bind(hyper, 'u', typeCurrentSafariURL)
