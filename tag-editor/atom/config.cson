@@ -3,22 +3,18 @@
     userId: "4f4a6974-1da8-cb33-4a12-f7a30e6a71ad"
   welcome:
     showOnStartup: false
-  core:
-    {}
+  core: {}
   editor:
-    invisibles:
-      {}
-    fontSize: 10
+    invisibles: {}
+    fontSize: 12
     fontFamily: "Menlo for Powerline"
     showInvisibles: true
     showIndentGuide: true
-    fontSize: 12
   linter:
     statusBar: "Show error of the selected line"
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/local/bin/shellcheck"
-  "go-format":
-    {}
+  "go-format": {}
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
   "linter-rubocop":
@@ -31,6 +27,8 @@
     plugins:
       linter: true
       "find-and-replace": true
+      bookmarks: true
+      selection: true
   "highlight-line":
     enableSelectionBorder: true
     underline: "dashed"
