@@ -6,9 +6,9 @@ switch (uname)
 		set -gx P4CONFIG .p4config
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
+		alias git=hub
 	case "Linux"
 		set -gx PATH ~/.rbenv/bin $PATH
 end
 set -gx PATH ~/.bin $GOPATH/bin /usr/local/sbin $PATH
 . (rbenv init -|psub)
-

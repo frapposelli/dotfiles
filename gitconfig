@@ -38,3 +38,5 @@
 	autosetuprebase = always
 [alias]
   pl = pull --rebase
+[hub]
+	protocol = https
