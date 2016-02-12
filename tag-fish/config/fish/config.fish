@@ -7,6 +7,7 @@ switch (uname)
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 		alias git=hub
+		eval (direnv hook fish)
 	case "Linux"
 		set -gx PATH ~/.rbenv/bin $PATH
 end
