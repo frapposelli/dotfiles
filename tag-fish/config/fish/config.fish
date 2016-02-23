@@ -9,6 +9,10 @@ switch (uname)
 		set -gx PATH ~/Development/google-cloud-sdk/bin $PATH
 		alias git=hub
 		eval (direnv hook fish)
+    function code
+      set -lx VSCODE_CWD $PWD
+      open -n -b "com.microsoft.VSCode" --args $argv
+    end
 	case "Linux"
 		set -gx PATH ~/.rbenv/bin $PATH
 end
