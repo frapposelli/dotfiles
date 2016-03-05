@@ -14,6 +14,7 @@
     showInvisibles: true
   "exception-reporting":
     userId: "4f4a6974-1da8-cb33-4a12-f7a30e6a71ad"
+  figlet: {}
   "go-format": {}
   "go-plus":
     formatTool: "gofmt"
@@ -26,6 +27,7 @@
     underline: "dashed"
   linter:
     statusBar: "Show error of the selected line"
+  "linter-ansible-linting": {}
   "linter-docker": {}
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
