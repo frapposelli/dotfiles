@@ -18,3 +18,5 @@ switch (uname)
 end
 set -gx PATH ~/.bin $GOPATH/bin /usr/local/sbin $PATH
 . (rbenv init -|psub)
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
