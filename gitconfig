@@ -22,7 +22,7 @@
 	branch = magenta
 [core]
 	editor = /usr/local/bin/vim
-	excludesfile = /Users/frapposelli/.gitignore_global
+	excludesfile = /Users/fabio/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -51,10 +51,10 @@
   grep = grep -Ii
   bra = branch -ra
   ai = add --interactive
-  cm = commit -m
-  cma = commit -a -m
-  ca = commit --amend
-  amend = commit --amend
+  cm = commit -S -m
+  cma = commit -S -a -m
+  ca = commit -S --amend
+  amend = commit -S --amend
   caa = commit -a --amend -C HEAD
   ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -90,3 +90,5 @@
 	templatedir = /Users/fabio/.git-template-with-git-hooks
 [push]
 	default = simple
+[gpg]
+	program = gpg2
