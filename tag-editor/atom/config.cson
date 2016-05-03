@@ -17,9 +17,9 @@
   figlet: {}
   "go-format": {}
   "go-plus":
-    formatTool: "gofmt"
+    formatTool: "goimports"
     goPath: "~/Development/goworkspace"
-    lintOnSave: false
+    lintOnSave: true
   "go-rename": {}
   "highlight-line":
     enableSelectionBorder: true
