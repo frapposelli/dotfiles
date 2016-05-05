@@ -21,11 +21,11 @@
 	untracked = cyan reverse
 	branch = magenta
 [core]
-	editor = /usr/local/bin/vim
+	editor = atom --wait
 	excludesfile = /Users/fabio/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -40,7 +40,7 @@
 [alias]
   st = status -s
   cl = clone
-  ci = commit
+  ci = commit -S
   co = checkout
   br = branch
   r = reset
