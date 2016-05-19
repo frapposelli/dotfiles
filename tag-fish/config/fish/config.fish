@@ -6,7 +6,7 @@ switch (uname)
 		set -gx P4CONFIG .p4config
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
-		set -gx PATH ~/Development/google-cloud-sdk/bin $PATH
+		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin $PATH
 		alias git=hub
 		eval (direnv hook fish)
     function code

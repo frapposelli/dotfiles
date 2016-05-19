@@ -1,10 +1,17 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "cdd83cd1-0e40-4ec0-8a20-80f8acfdcbee"
+    general:
+      _analyticsUserId: "7f35bba7-5889-47e9-b606-2cdbf14d32af"
     language_markdown_beautify_on_save: true
+  "autocomplete-go":
+    snippetMode: "nameAndType"
+  "build-make":
+    useMake: true
   core:
     disabledPackages: [
       "language-gfm"
+      "go-debug"
     ]
   editor:
     fontFamily: "Menlo for Powerline"
