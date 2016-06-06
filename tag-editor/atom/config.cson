@@ -22,6 +22,8 @@
   "exception-reporting":
     userId: "4f4a6974-1da8-cb33-4a12-f7a30e6a71ad"
   figlet: {}
+  "git-blame":
+    ignoreWhiteSpaceDiffs: true
   "go-format": {}
   "go-plus":
     formatTool: "goimports"
