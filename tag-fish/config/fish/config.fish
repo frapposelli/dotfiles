@@ -8,6 +8,7 @@ switch (uname)
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin $PATH
 		alias git=hub
+		alias ccat="pygmentize -O style=monokai -f console256 -g"
 		eval (direnv hook fish)
     function code
       set -lx VSCODE_CWD $PWD
