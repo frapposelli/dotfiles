@@ -10,6 +10,7 @@ switch (uname)
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
 		eval (direnv hook fish)
+		eval (opam config env)
     function code
       set -lx VSCODE_CWD $PWD
       open -n -b "com.microsoft.VSCode" --args $argv
