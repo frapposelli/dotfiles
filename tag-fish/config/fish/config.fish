@@ -9,6 +9,7 @@ switch (uname)
 		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin $PATH
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
+		alias g=git
 		eval (direnv hook fish)
 		eval (opam config env)
     function code
