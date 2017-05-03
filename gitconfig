@@ -3,7 +3,7 @@
 	email = fabio@vmware.com
 	quotepath = false
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	signingkey = 3BF303AC750875CE
+	signingkey = 69F5AA23EE3B1516
 [color]
 	ui = true
 [color "branch"]
@@ -22,7 +22,7 @@
 	untracked = cyan reverse
 	branch = magenta
 [core]
-	editor = atom --wait
+	editor = vim
 	excludesfile = /Users/fabio/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -33,9 +33,10 @@
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
-	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [branch]
 	autosetuprebase = always
 [alias]
@@ -94,3 +95,5 @@
 	default = simple
 [gpg]
 	program = gpg2
+[commit]
+	template = /Users/fabio/.stCommitMsg

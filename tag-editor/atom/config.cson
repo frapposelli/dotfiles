@@ -1,9 +1,10 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "cdd83cd1-0e40-4ec0-8a20-80f8acfdcbee"
     general:
-      _analyticsUserId: "7f35bba7-5889-47e9-b606-2cdbf14d32af"
-    language_markdown_beautify_on_save: true
+      _analyticsUserId: "cdd83cd1-0e40-4ec0-8a20-80f8acfdcbee"
+    markdown:
+      beautify_on_save: true
+    perl: {}
   "autocomplete-go":
     snippetMode: "nameAndType"
   "build-make":
@@ -13,6 +14,7 @@
       "language-gfm"
       "go-debug"
     ]
+    telemetryConsent: "limited"
   editor:
     fontFamily: "Menlo for Powerline"
     fontSize: 12
@@ -35,6 +37,7 @@
     hideHighlightOnSelect: true
     underline: "dashed"
   linter:
+    errorPanelHeight: 149
     statusBar: "Show error of the selected line"
   "linter-ansible-linting": {}
   "linter-docker": {}

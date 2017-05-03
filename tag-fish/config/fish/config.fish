@@ -6,7 +6,7 @@ switch (uname)
 		set -gx P4CONFIG .p4config
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
-		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin $PATH
+		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin /Library/TeX/texbin $PATH
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
 		alias g=git
