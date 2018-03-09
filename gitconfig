@@ -22,13 +22,13 @@
 	untracked = cyan reverse
 	branch = magenta
 [core]
-	editor = vim
+	editor = code --wait
 	excludesfile = /Users/fabio/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
@@ -97,3 +97,16 @@
 	program = gpg2
 [commit]
 	template = /Users/fabio/.stCommitMsg
+[mergetool "p4merge"]
+  cmd = /Applications/p4merge.app/Contents/MacOS/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  keepTemporaries = false
+  trustExitCode = false
+  keepBackup = false
+[merge]
+  tool = p4merge
+[url "ssh://git@bitbucket.org/"]
+	insteadOf = https://bitbucket.org/
+[http "https://git.demo.localflynn.com"]
+	sslCAInfo = /Users/fabio/.flynn/ca-certs/default.pem
+[credential "https://git.demo.localflynn.com"]
+	helper = /usr/local/bin/flynn git-credentials

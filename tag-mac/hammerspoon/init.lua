@@ -28,16 +28,19 @@ local hyper = {"⌘", "⌥", "⌃"}
 local display_laptop = "Color LCD"
 local display_monitor = "Thunderbolt Display"
 
--- Define audio device names for headphone/speaker switching
-local headphoneDevice = "USB PnP Sound Device"
-local speakerDevice = "Audioengine 2+"
+-- Define monitor names on desktop
+local display_topleft = "DELL U2713HM"
+local display_bottomleft = "DELL P2715Q (1)"
+local display_bottomright = "DELL P2715Q (2)"
+local display_topright = "DELL U2212HM"
 
--- Define default brightness for MiLight extension
-local brightness = 13
-local officeLED = hs.milight.new("10.0.88.255")
+-- Define audio device names for headphone/speaker switching
+local headphoneDevice = "Jabra PRO 9470"
+local speakerDevice = "Speaker-Schiit USB Audio Device"
+local conferenceDevice = "BCC950 ConferenceCam"
 
 -- Defines for WiFi watcher
-local homeSSID = "chrul" -- My home WiFi SSID
+local homeSSID = "unixborg" -- My home WiFi SSID
 local lastSSID = hs.wifi.currentNetwork()
 
 -- Defines for screen watcher
@@ -86,6 +89,13 @@ local dual_display = {
     {"Evernote",          nil,          display_monitor, hs.layout.right50,   nil, nil},
     {"iTunes",            "iTunes",     display_laptop,  hs.layout.maximized, nil, nil},
     iTunesMiniPlayerLayout,
+}
+
+local macpro_default = {
+    {"Slack", nil, display_topright, hs.layout.maximized, nil, nil},
+    {"Mail", nil, display_topleft, hs.layout.maximized, nil, nil},
+    {"Airmail 2", nil, display_topleft, hs.layout.maximized, nil, nil},
+    {"Fantastical", "Fantastical", display_topleft, hs.layout.maximized, nil, nil}
 }
 
 -- Helper functions
@@ -363,6 +373,7 @@ hs.hotkey.bind(hyper, 'r', function() hs.window.focusedWindow():toggleFullScreen
 -- hs.hotkey.bind(hyper, '1', function() hs.layout.apply(internal_display) end)
 -- hs.hotkey.bind(hyper, '2', function() hs.layout.apply(dual_display) end)
 --
+hs.hotkey.bind(hyper, '3', function() hs.layout.apply(macpro_default) end)
 -- -- Hotkeys to interact with the window grid
 hs.hotkey.bind(hyper, 'Left', hs.grid.pushWindowLeft)
 hs.hotkey.bind(hyper, 'Right', hs.grid.pushWindowRight)
@@ -400,6 +411,7 @@ hs.hotkey.bind(hyper, 'Down', hs.grid.pushWindowDown)
 -- hs.hotkey.bind(hyper, 'y', hs.toggleConsole)
 -- hs.hotkey.bind(hyper, 'n', function() os.execute("open ~") end)
 hs.hotkey.bind(hyper, 'c', caffeineClicked)
+-- hs.hotkey.bind(hyper, 'h', hs.hints.windowHints())
 -- hs.hotkey.bind(hyper, 'Escape', toggle_audi-o_output)
 -- hs.hotkey.bind(hyper, 'm', toggleSkypeMute)
 -- hs.hotkey.bind(hyper, 'd', mouseHighlight)

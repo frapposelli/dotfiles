@@ -6,20 +6,18 @@ switch (uname)
 		set -gx P4CONFIG .p4config
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
-		set -gx PATH ~/Development/google-cloud-sdk/bin ~/.cargo/bin /Library/TeX/texbin $PATH
+		set -gx PATH ~/Development/google-cloud-sdk/bin /Library/TeX/texbin $PATH
+		set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
 		alias g=git
+		alias d=docker
 		eval (direnv hook fish)
-		eval (opam config env)
-    function code
-      set -lx VSCODE_CWD $PWD
-      open -n -b "com.microsoft.VSCode" --args $argv
-    end
+		. (rbenv init -|psub)
 	case "Linux"
-		set -gx PATH ~/.rbenv/bin $PATH
 end
+alias g=git
+alias d=docker
 set -gx PATH ~/.bin $GOPATH/bin /usr/local/sbin $PATH
-. (rbenv init -|psub)
 
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
