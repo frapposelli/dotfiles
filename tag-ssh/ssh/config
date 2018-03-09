@@ -1,0 +1,11 @@
+Host *
+    controlpath /tmp/ssh_mux_%h_%p_%r
+    controlmaster auto
+    StrictHostKeyChecking no
+Host *.eng.vmware.com
+    identityfile ~/.ssh/id_rsa_vmware
+    User frapposelli
+Host dbc
+    identityfile ~/.ssh/id_rsa_vmware
+    User frapposelli
+    HostName sof4-dbc302.eng.vmware.com
