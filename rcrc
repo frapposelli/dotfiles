@@ -1,3 +1,3 @@
-TAGS="ssh vagrant mac"
+TAGS="ssh vagrant mac mutt"
 EXCLUDES="README.md LICENSE"
 DOTFILES_DIRS="$HOME/.dotfiles"
