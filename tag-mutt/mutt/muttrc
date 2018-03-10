@@ -84,7 +84,6 @@ macro   index   gi "<change-folder>=INBOX<enter>"       "Go to Inbox"
 macro   index   gs "<change-folder>=$my_sent<enter>"    "Go to Sent"
 macro   index   gd "<change-folder>=$my_drafts<enter>"  "Go to Drafts"
 macro   index   gt "<change-folder>=$my_trash<enter>"   "Go to Trash"
-macro   index   gr "<change-folder>="Mailing Lists/k8s-dev"<enter>"   "Go to K8S-Dev"
 
 # Index
 bind    index   <up>        previous-entry
