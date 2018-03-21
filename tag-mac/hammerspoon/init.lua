@@ -91,6 +91,18 @@ local dual_display = {
     iTunesMiniPlayerLayout,
 }
 
+function zoomWindowCompare(title, layout_title)
+    if string.sub(title, 0, 16) == layout_title then
+        return true
+    end
+    return false
+end
+
+local zoom_settings = {
+    {"zoom.us", "Zoom", display_bottomleft, hs.layout.right30, nil, nil},
+    {"zoom.us", "Zoom Meeting ID:", display_bottomleft, hs.layout.left70, nil, nil},
+}
+
 local macpro_default = {
     {"Slack", nil, display_topright, hs.layout.maximized, nil, nil},
     {"Mail", nil, display_topleft, hs.layout.maximized, nil, nil},
@@ -368,12 +380,14 @@ hs.hotkey.bind(hyper, '[', function() hs.window.focusedWindow():moveToUnit(hs.la
 hs.hotkey.bind(hyper, ']', function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end)
 hs.hotkey.bind(hyper, 'f', toggle_window_maximized)
 hs.hotkey.bind(hyper, 'r', function() hs.window.focusedWindow():toggleFullScreen() end)
+
 --
 -- -- Hotkeys to trigger defined layouts
 -- hs.hotkey.bind(hyper, '1', function() hs.layout.apply(internal_display) end)
 -- hs.hotkey.bind(hyper, '2', function() hs.layout.apply(dual_display) end)
 --
 hs.hotkey.bind(hyper, '3', function() hs.layout.apply(macpro_default) end)
+hs.hotkey.bind(hyper, 'z', function() hs.layout.apply(zoom_settings, zoomWindowCompare) end)
 -- -- Hotkeys to interact with the window grid
 hs.hotkey.bind(hyper, 'Left', hs.grid.pushWindowLeft)
 hs.hotkey.bind(hyper, 'Right', hs.grid.pushWindowRight)
