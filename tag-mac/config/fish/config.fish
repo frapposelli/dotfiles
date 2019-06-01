@@ -18,6 +18,12 @@ switch (uname)
 end
 alias g=git
 alias d=docker
-set -gx PATH ~/.bin $GOPATH/bin /usr/local/sbin $PATH
+set -gx PATH ~/.bin $GOPATH/bin $HOME/.fastlane/bin /usr/local/sbin ~/Library/Android/sdk/platform-tools $PATH
+set -gx ANDROID_SDK /Users/fabio/Library/Android/sdk
 
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
 
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
