@@ -422,14 +422,14 @@ hs.hotkey.bind(hyper, 'Down', hs.grid.pushWindowDown)
 -- hs.hotkey.bind(hyper, 'f6', function() brightness = officeLED:zoneBrightness(0, hs.milight.maxBrightness) end)
 --
 -- -- Misc hotkeys
--- hs.hotkey.bind(hyper, 'y', hs.toggleConsole)
+hs.hotkey.bind(hyper, 'y', hs.toggleConsole)
 -- hs.hotkey.bind(hyper, 'n', function() os.execute("open ~") end)
 hs.hotkey.bind(hyper, 'c', caffeineClicked)
 -- hs.hotkey.bind(hyper, 'h', hs.hints.windowHints())
 -- hs.hotkey.bind(hyper, 'Escape', toggle_audi-o_output)
 -- hs.hotkey.bind(hyper, 'm', toggleSkypeMute)
--- hs.hotkey.bind(hyper, 'd', mouseHighlight)
--- hs.hotkey.bind(hyper, 'u', typeCurrentSafariURL)
+hs.hotkey.bind(hyper, 'd', mouseHighlight)
+hs.hotkey.bind(hyper, 'u', typeCurrentSafariURL)
 --
 -- -- Type the current clipboard, to get around web forms that don't let you paste
 -- -- (Note: I have Fn-v mapped to F17 in Karabiner)

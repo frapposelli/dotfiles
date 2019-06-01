@@ -106,7 +106,3 @@
   tool = p4merge
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
-[http "https://git.demo.localflynn.com"]
-	sslCAInfo = /Users/fabio/.flynn/ca-certs/default.pem
-[credential "https://git.demo.localflynn.com"]
-	helper = /usr/local/bin/flynn git-credentials
