@@ -93,6 +93,7 @@
 	templatedir = /Users/fabio/.git-template-with-git-hooks
 [push]
 	default = simple
+	followTags = true
 [gpg]
 	program = gpg2
 [commit]
