@@ -7,6 +7,7 @@ switch (uname)
 		set -gx P4PORT perforce.eng.vmware.com:1666
 		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 		set -gx PATH ~/Development/google-cloud-sdk/bin /Library/TeX/texbin $PATH
+		set -g fish_user_paths "/usr/local/opt/go@1.12/bin"
 		set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
