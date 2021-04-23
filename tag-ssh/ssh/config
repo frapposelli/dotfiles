@@ -3,9 +3,18 @@ Host *
     controlmaster auto
     StrictHostKeyChecking no
 Host *.eng.vmware.com
-    identityfile ~/.ssh/id_rsa_vmware
+    IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
 Host dbc
-    identityfile ~/.ssh/id_rsa_vmware
+    IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
     HostName sof4-dbc302.eng.vmware.com
+Host git-codecommit.*.amazonaws.com
+    User APKASBBHGVGV4UX635L6
+
+Host frigate-dev
+    HostName frigate-dev
+
+Host 192.168.10.47
+    HostName 192.168.10.47
+    User pi

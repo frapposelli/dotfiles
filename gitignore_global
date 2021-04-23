@@ -12,7 +12,6 @@ Thumbs.db
 .vagrant
 Gemfile.lock
 node_modules
-*.log
 
 ### db files
 *.sqlite

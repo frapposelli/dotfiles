@@ -24,6 +24,9 @@
 [core]
 	editor = code --wait
 	excludesfile = /Users/fabio/.gitignore_global
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -104,6 +107,8 @@
   trustExitCode = false
   keepBackup = false
 [merge]
-  tool = p4merge
+	tool = p4merge
+[delta]
+	side-by-side = true
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
