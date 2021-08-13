@@ -17,7 +17,8 @@ switch (uname)
 		alias d=docker
 		eval (direnv hook fish)
 		status --is-interactive; and source (rbenv init -|psub)
-		status --is-interactive; and source (pyenv init -|psub)
+		status is-login; and pyenv init --path | source
+		pyenv init - | source
 	case "Linux"
 end
 alias g=git
