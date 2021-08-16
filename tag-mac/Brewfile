@@ -47,7 +47,6 @@ brew "git-lfs"
 brew "gnu-tar"
 brew "gnupg", link: false
 brew "go"
-brew "go@1.12"
 brew "goreleaser"
 brew "graphviz"
 brew "htop"
@@ -71,17 +70,14 @@ brew "nvm"
 brew "octant"
 brew "packer"
 brew "pkg-config"
-brew "povray"
 brew "pv"
 brew "pyenv"
-brew "python@2"
 brew "qemu"
 brew "ruby-build"
 brew "rbenv"
 brew "shellcheck"
 brew "ssh-copy-id"
 brew "sshuttle"
-brew "telegram-cli"
 brew "terraform"
 brew "tig"
 brew "tmate"
@@ -93,8 +89,6 @@ brew "watch"
 brew "wget"
 brew "wireguard-tools"
 brew "zlib"
-brew "drone/drone/drone"
-brew "gobuffalo/tap/buffalo"
 brew "thoughtbot/formulae/rcm"
 brew "wagoodman/dive/dive"
 cask "1password"
@@ -103,41 +97,38 @@ cask "4k-video-downloader"
 cask "coconutbattery"
 cask "daisydisk"
 cask "docker"
-cask "google-chrome"
-cask "gpg-suite-no-mail"
-cask "hammerspoon"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
-cask "java"
-cask "keybase"
 cask "microsoft-office"
-cask "p4v"
 cask "paw"
 cask "sourcetree"
 cask "slack"
 cask "telegram"
-cask "tunnelblick"
 cask "vagrant"
-cask "virtualbox"
 cask "vmware-fusion"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "xscreensaver"
 cask "zoomus"
-mas "Acorn", id: 634108295
 mas "Airmail", id: 918858936
-mas "AJA System Test Lite", id: 1092006274
 mas "Bear", id: 1091189122
 mas "Fantastical", id: 975937182
-mas "Freeze", id: 1046095491
-mas "Graphic", id: 404705039
+mas "Todoist", id: 585829637
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
+mas "Numbers", id: 409203825
+mas "Kindle", id: 405399194
 mas "The Clock", id: 488764545
 mas "Todoist", id: 585829637
-mas "Tweetbot", id: 1384080005
-mas "uBlock", id: 1385985095
 mas "WiFi Signal", id: 525912054
-mas "YubiKey Personalization Tool", id: 638161122
+mas "Affinity Photo", id: 824183456
+mas "Affinity Publisher", id: 881418622
+mas "Affinity Designer", id: 824171161
+mas "MoneyWiz", id: 1511185140
+mas "Tailscale", id: 1475387142
+mas "Notion Web Clipper", id: 1559269364
+mas "Grammarly for Safari", id: 1462114288
+mas "AdGuard for Safari", id: 1440147259
+mas "Xcode", id: 497799835

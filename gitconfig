@@ -98,7 +98,7 @@
 	default = simple
 	followTags = true
 [gpg]
-	program = gpg2
+	program = gpg
 [commit]
 	template = /Users/fabio/.stCommitMsg
 [mergetool "p4merge"]
