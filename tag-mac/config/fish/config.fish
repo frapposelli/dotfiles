@@ -1,35 +1,68 @@
+set -gx COLORTERM truecolor
+set -gx EDITOR nvim
+set -gx LANG en_US.UTF-8    # Adjust this to your language!
+set -gx LC_ALL en_US.UTF-8  # Adjust this to your locale!
+set -gx VIRTUAL_ENV_DISABLE_PROMPT true
+set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+set -gx GOPATH $HOME/Development/goworkspace
+set -x PATH ~/.bin $GOPATH/bin /usr/local/sbin /usr/local/bin $PATH
+set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
+set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
+set -gx DOCKER_BUILDKIT 1
+set -gx COMPOSE_DOCKER_CLI_BUILD 1
+set -g fish_key_bindings fish_vi_key_bindings
+set -g fish_bind_mode insert
+
+# Title options
+set -g theme_title_display_process yes
+set -g theme_title_display_path yes
+set -g theme_title_display_user yes
+set -g theme_title_use_abbreviated_path yes
+
+# Prompt options
+set -g theme_display_ruby yes
+set -g theme_display_virtualenv yes
+set -g theme_display_vagrant no
+set -g theme_display_vi yes
+set -g theme_display_k8s_context no # yes
+set -g theme_display_user yes
+set -g theme_display_hostname yes
+set -g theme_show_exit_status yes
+set -g theme_git_worktree_support no
+set -g theme_display_git yes
+set -g theme_display_git_dirty yes
+set -g theme_display_git_untracked yes
+set -g theme_display_git_ahead_verbose yes
+set -g theme_display_git_dirty_verbose yes
+set -g theme_display_git_master_branch yes
+set -g theme_display_date yes
+set -g theme_display_cmd_duration yes
+set -g theme_powerline_fonts yes
+set -g theme_nerd_fonts yes
+set -g theme_color_scheme solarized-dark
+
+bind -M insert \cg forget
+
+if which asdf > /dev/null; status --is-interactive; and source (brew --prefix asdf)/asdf.fish; end
+if which direnv > /dev/null; direnv hook fish | source; end
+if which goenv > /dev/null; status --is-interactive; and source (goenv init -|psub); end
+if which rbenv > /dev/null; status --is-interactive; and source (rbenv init -|psub); end
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
+
 switch (uname)
 	case "Darwin"
-		set -gx RBENV_ROOT /usr/local/var/rbenv
-		set -gx GOPATH ~/Development/goworkspace
-		set -gx P4EDITOR vi
-		set -gx P4CONFIG .p4config
-		set -gx P4PORT perforce.eng.vmware.com:1666
-		set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 		set -gx PATH ~/Development/google-cloud-sdk/bin /Library/TeX/texbin $PATH
-		set -g fish_user_paths "/usr/local/opt/go@1.12/bin"
-		set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-		set -gx LC_ALL en_US.UTF-8
-		set -gx LC_CTYPE en_US.UTF-8
 		alias git=hub
 		alias ccat="pygmentize -O style=monokai -f console256 -g"
+		alias k=kubectl
 		alias g=git
 		alias d=docker
-		eval (direnv hook fish)
-		status --is-interactive; and source (rbenv init -|psub)
-		status is-login; and pyenv init --path | source
-		pyenv init - | source
+		function nvm
+		   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+		end
+		set -x NVM_DIR ~/.nvm
+		nvm use default --silent
 	case "Linux"
 end
-alias g=git
-alias d=docker
-set -gx PATH ~/.bin $GOPATH/bin $HOME/.fastlane/bin /usr/local/sbin ~/Library/Android/sdk/platform-tools $PATH
-set -gx ANDROID_SDK /Users/fabio/Library/Android/sdk
-set -gx LC_ALL en_US.UTF-8
 
-function nvm
-   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-end
-
-set -x NVM_DIR ~/.nvm
-nvm use default --silent

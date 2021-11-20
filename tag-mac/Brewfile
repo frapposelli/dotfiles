@@ -65,6 +65,7 @@ brew "md5sha1sum", link: false
 brew "mkcert"
 brew "mozjpeg"
 brew "mutt"
+brew "neofetch"
 brew "nmap"
 brew "nvm"
 brew "octant"
@@ -112,6 +113,7 @@ cask "vlc"
 cask "whatsapp"
 cask "xscreensaver"
 cask "zoomus"
+cask "grammarly"
 mas "Airmail", id: 918858936
 mas "Bear", id: 1091189122
 mas "Fantastical", id: 975937182
