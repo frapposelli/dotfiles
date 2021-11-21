@@ -1,0 +1,3 @@
+[submodule "tag-vim/vim_runtime"]
+	path = tag-vim/vim_runtime
+	url = https://github.com/amix/vimrc.git
