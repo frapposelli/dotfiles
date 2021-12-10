@@ -67,3 +67,4 @@ switch (uname)
 	case "Linux"
 end
 
+fish_add_path /usr/local/opt/binutils/bin
