@@ -115,3 +115,5 @@
 	insteadOf = https://bitbucket.org/
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[url "ssh://git@gitlab.eng.vmware.com/"]
+	insteadOf = https://gitlab.eng.vmware.com/

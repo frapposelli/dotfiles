@@ -2,6 +2,7 @@ Host *
     controlpath /tmp/ssh_mux_%h_%p_%r
     controlmaster auto
     StrictHostKeyChecking no
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 Host *.eng.vmware.com
     IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
@@ -9,12 +10,3 @@ Host dbc
     IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
     HostName sof4-dbc302.eng.vmware.com
-Host git-codecommit.*.amazonaws.com
-    User APKASBBHGVGV4UX635L6
-
-Host frigate-dev
-    HostName frigate-dev
-
-Host 192.168.10.47
-    HostName 192.168.10.47
-    User pi
