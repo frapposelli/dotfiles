@@ -3,7 +3,7 @@
 	email = fabio@vmware.com
 	quotepath = false
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	signingkey = /Users/fabio/.ssh/id_ed25519_sk-GitSignature.pub
+	signingkey = /Users/fabio/.ssh/id_ed25519_sk_rk_GitSignature.pub
 [color]
 	ui = true
 [color "branch"]
