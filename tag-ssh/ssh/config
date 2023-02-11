@@ -1,8 +1,14 @@
+Host homeassistant.local
+    HostName homeassistant.local
+    User root
+
 Host *
     controlpath /tmp/ssh_mux_%h_%p_%r
     controlmaster auto
     StrictHostKeyChecking no
-	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    #IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    HostkeyAlgorithms +ssh-rsa
+	PubkeyAcceptedAlgorithms +ssh-rsa
 Host *.eng.vmware.com
     IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
@@ -10,3 +16,9 @@ Host dbc
     IdentityFile ~/.ssh/id_rsa_vmware
     User frapposelli
     HostName sof4-dbc302.eng.vmware.com
+Host github.com
+    IdentityFile ~/.ssh/id_ed25519_sk_rk_GitHub
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

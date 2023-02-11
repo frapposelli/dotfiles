@@ -44,6 +44,11 @@ set -g theme_newline_cursor no
 
 bind -M insert \cg forget
 
+alias ccat="pygmentize -O style=monokai -f console256 -g"
+alias k=kubectl
+alias g=git
+alias d=docker
+
 if which asdf > /dev/null; status --is-interactive; and source (brew --prefix asdf)/asdf.fish; end
 if which direnv > /dev/null; direnv hook fish | source; end
 if which goenv > /dev/null; status --is-interactive; and source (goenv init -|psub); end
@@ -54,11 +59,6 @@ if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
 switch (uname)
 	case "Darwin"
 		set -gx PATH ~/Development/google-cloud-sdk/bin /Library/TeX/texbin $PATH
-		alias git=hub
-		alias ccat="pygmentize -O style=monokai -f console256 -g"
-		alias k=kubectl
-		alias g=git
-		alias d=docker
 		function nvm
 		   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 		end

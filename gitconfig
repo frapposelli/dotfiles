@@ -3,7 +3,7 @@
 	email = fabio@vmware.com
 	quotepath = false
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	signingkey = 69F5AA23EE3B1516
+	signingkey = /Users/fabio/.ssh/id_ed25519_sk-GitSignature.pub
 [color]
 	ui = true
 [color "branch"]
@@ -101,12 +101,13 @@
 [hub]
 	protocol = https
 [init]
-	templatedir = /Users/fabio/.git-template-with-git-hooks
+	defaultBranch = main
 [push]
 	default = simple
 	followTags = true
 [gpg]
 	program = gpg
+	format = ssh
 [commit]
 	template = /Users/fabio/.stCommitMsg
 [delta]
