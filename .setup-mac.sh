@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 fancy_echo() {
   local fmt="$1"; shift
   # shellcheck disable=SC2059
@@ -47,9 +47,6 @@ brew_expand_alias() {
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    append_to_zshrc '# recommended by brew doctor'
-    # shellcheck disable=SC2016
-    append_to_zshrc 'export PATH="/usr/local/bin:$PATH"' 1
     export PATH="/usr/local/bin:$PATH"
 else
   fancy_echo "Homebrew already installed. Skipping ..."
@@ -65,9 +62,10 @@ case "$SHELL" in
   *)
     fancy_echo "Changing your shell to fish ..."
       if ! grep -q fish /etc/shells; then
+        # shellcheck disable=SC2005
         echo "$(which fish)" | sudo tee -a /etc/shells
       fi
-      chsh -s "$(which fish)"
+      sudo chsh -s "$(which fish)" "$USER"
     ;;
 esac
 

@@ -20,7 +20,6 @@ brew "automake"
 brew "awscli"
 brew "bash"
 brew "bat"
-brew "bats"
 brew "bazel"
 brew "binutils"
 brew "binwalk"
@@ -33,14 +32,12 @@ brew "coreutils"
 brew "cosign"
 brew "direnv"
 brew "exiftool"
-brew "ffmpeg"
 brew "fish"
 brew "fortune"
 brew "gdk-pixbuf"
 brew "gettext"
 brew "gh"
 brew "git-delta"
-brew "git-hooks"
 brew "git-lfs"
 brew "git"
 brew "glib"
@@ -182,16 +179,13 @@ cask "ui"
 cask "vagrant"
 cask "visual-studio-code"
 cask "vlc"
-cask "vmware-fusion"
 cask "xscreensaver"
 mas "Fantastical", id: 975937182
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Serial", id: 877615577
 mas "Tailscale", id: 1475387142
 mas "The Clock", id: 488764545
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "WiFi Signal", id: 525912054
-mas "Xcode", id: 497799835
