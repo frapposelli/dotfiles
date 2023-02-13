@@ -61,6 +61,9 @@ case "$SHELL" in
   */fish) : ;;
   *)
     fancy_echo "Changing your shell to fish ..."
+      if ! grep -q fish /etc/shells; then
+          echo "$(which fish)" >> /etc/shells
+      fi
       chsh -s "$(which fish)"
     ;;
 esac
