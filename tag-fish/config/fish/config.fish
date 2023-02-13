@@ -25,9 +25,9 @@ set -g theme_display_virtualenv no
 set -g theme_display_vagrant no
 set -g theme_display_vi no
 set -g theme_display_k8s_context no
-set -g theme_display_user no
+set -g theme_display_user ssh
 set -g theme_display_jobs_verbose yes
-set -g theme_display_hostname no
+set -g theme_display_hostname ssh
 set -g theme_show_exit_status yes
 set -g theme_git_worktree_support no
 set -g theme_display_git yes
