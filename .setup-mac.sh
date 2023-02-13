@@ -90,4 +90,6 @@ brew bundle install --file "$HOME/.Brewfile"
 if ! test -d "$HOME/.local/share/omf/"; then
   fancy_echo "Installing oh-my-fish"
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+  omf i bobthefish
+  omf i bass
 fi
