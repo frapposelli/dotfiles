@@ -25,7 +25,8 @@ set -g theme_display_virtualenv no
 set -g theme_display_vagrant no
 set -g theme_display_vi no
 set -g theme_display_k8s_context no
-set -g theme_display_user yes
+set -g theme_display_user no
+set -g theme_display_jobs_verbose yes
 set -g theme_display_hostname no
 set -g theme_show_exit_status yes
 set -g theme_git_worktree_support no
@@ -39,7 +40,7 @@ set -g theme_display_date yes
 set -g theme_display_cmd_duration yes
 set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
-set -g theme_color_scheme gruvbox
+set -g theme_color_scheme dark
 set -g theme_newline_cursor no
 
 bind -M insert \cg forget
