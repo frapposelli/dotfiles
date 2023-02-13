@@ -7,6 +7,9 @@ fancy_echo() {
 set -e
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# ask for sudo password
+sudo -v
+
 brew_install_or_upgrade() {
   if brew_is_installed "$1"; then
     if brew_is_upgradable "$1"; then
@@ -62,7 +65,7 @@ case "$SHELL" in
   *)
     fancy_echo "Changing your shell to fish ..."
       if ! grep -q fish /etc/shells; then
-          echo "$(which fish)" >> /etc/shells
+        echo "$(which fish)" | sudo tee -a /etc/shells
       fi
       chsh -s "$(which fish)"
     ;;
