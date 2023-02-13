@@ -1,6 +1,6 @@
 [user]
 	name = Fabio Rapposelli
-	email = fabio@vmware.com
+	email = fabio@rapposelli.org
 	quotepath = false
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	signingkey = /Users/fabio/.ssh/id_ed25519_sk_rk_GitSignature.pub
@@ -26,12 +26,6 @@
 	excludesfile = /Users/fabio/.gitignore_global
 [interactive]
 	diffFilter = delta --color-only
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
@@ -98,8 +92,6 @@
   empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
   la = "!git config -l | grep alias | cut -c 7-"
   pl = pull --rebase
-[hub]
-	protocol = https
 [init]
 	defaultBranch = main
 [push]
@@ -112,9 +104,3 @@
 	template = /Users/fabio/.stCommitMsg
 [delta]
 	side-by-side = true
-[url "ssh://git@bitbucket.org/"]
-	insteadOf = https://bitbucket.org/
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[url "ssh://git@gitlab.eng.vmware.com/"]
-	insteadOf = https://gitlab.eng.vmware.com/
