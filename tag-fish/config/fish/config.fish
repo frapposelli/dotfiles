@@ -3,7 +3,7 @@ set -gx EDITOR nvim
 set -gx LANG en_US.UTF-8    # Adjust this to your language!
 set -gx LC_ALL en_US.UTF-8  # Adjust this to your locale!
 set -gx VIRTUAL_ENV_DISABLE_PROMPT true
-set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+# set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 set -gx GOPATH $HOME/Development/goworkspace
 set -x PATH ~/.bin $GOPATH/bin $PATH
 set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
