@@ -104,3 +104,9 @@
 	template = /Users/fabio/.stCommitMsg
 [delta]
 	side-by-side = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential

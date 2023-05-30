@@ -56,6 +56,7 @@ if which goenv > /dev/null; status --is-interactive; and source (goenv init -|ps
 if which rbenv > /dev/null; status --is-interactive; and source (rbenv init -|psub); end
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
 if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
+if which op > /dev/null; status --is-interactive; and source /Users/fabio/.config/op/plugins.sh; end
 
 switch (uname)
 	case "Darwin"
@@ -75,3 +76,9 @@ switch (uname)
 end
 
 fish_add_path /usr/local/opt/binutils/bin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+

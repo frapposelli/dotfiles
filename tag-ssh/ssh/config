@@ -1,3 +1,6 @@
+Host lab
+    HostName lab
+
 Host homeassistant.local
     HostName homeassistant.local
     User root
