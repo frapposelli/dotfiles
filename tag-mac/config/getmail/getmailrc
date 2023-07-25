@@ -29,3 +29,7 @@ read_all = false
 # do not alter messages
 delivered_to = false
 received = false
+# speeds up davmail
+skip_imap_fetch_size = true
+# makes getmail more crash resistant
+to_oldmail_on_each_mail = true
