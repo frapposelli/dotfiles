@@ -5,7 +5,7 @@ set -gx LC_ALL en_US.UTF-8  # Adjust this to your locale!
 set -gx VIRTUAL_ENV_DISABLE_PROMPT true
 # set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 set -gx GOPATH $HOME/Development/goworkspace
-set -x PATH ~/.bin $GOPATH/bin $PATH
+set -x PATH ~/.bin ~/.scripts $GOPATH/bin $PATH
 set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
 set -gx HOMEBREW_CASK_OPTS --appdir=/Applications
 set -gx DOCKER_BUILDKIT 1

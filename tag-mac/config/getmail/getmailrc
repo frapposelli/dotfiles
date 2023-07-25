@@ -1,0 +1,31 @@
+[retriever]
+type = SimpleIMAPRetriever
+server = localhost
+port = 1143
+mailboxes = ALL
+username = frapposelli@vmware.com
+password = xxx
+
+[destination]
+type = MultiDestination
+destinations = ('[mdir]', '[devonthink]')
+
+[mdir]
+type = Maildir
+path = ~/Mail/VMware/
+
+[devonthink]
+type = MDA_external
+path = /Users/fabio/.scripts/import-mail-to-dt.py
+
+
+[options]
+verbose = 1
+# message_log = ~/.config/getmail/log
+
+# retrieve only new messages
+# if set to true it will re-download ALL messages every time!
+read_all = false
+# do not alter messages
+delivered_to = false
+received = false
