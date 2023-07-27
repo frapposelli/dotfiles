@@ -1,0 +1,21 @@
+IMAPAccount synology
+Host ocean.rapposelli.org
+User "fabio"
+PassCmd "op read 'op://Private/Synology OCEAN/password'"
+
+IMAPStore archive-synology
+Account synology
+UseNamespace no
+
+MaildirStore local
+Path ~/Mail/VMware/
+Inbox ~/Mail/VMware/INBOX
+
+Channel vmware-archive
+Near :local:
+Far :archive-synology:
+Create Far
+Sync Push
+Patterns *
+SyncState *
+CopyArrivalDate yes

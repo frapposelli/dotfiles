@@ -9,20 +9,20 @@ password = xxx
 [destination]
 type = MultiDestination
 destinations = ('[mdir]', '[devonthink]')
-
+ 
 [mdir]
 type = Maildir
-path = ~/Mail/VMware/
+path = ~/Mail/VMware/INBOX/
 
 [devonthink]
 type = MDA_external
 path = /Users/fabio/.scripts/import-mail-to-dt.py
 
-
 [options]
 verbose = 1
-# message_log = ~/.config/getmail/log
 
+# Absolutely do not delete
+delete = false
 # retrieve only new messages
 # if set to true it will re-download ALL messages every time!
 read_all = false
@@ -31,5 +31,3 @@ delivered_to = false
 received = false
 # speeds up davmail
 skip_imap_fetch_size = true
-# makes getmail more crash resistant
-to_oldmail_on_each_mail = true

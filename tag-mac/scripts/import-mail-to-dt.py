@@ -10,7 +10,7 @@ import logging
 import traceback
 
 # DT database name
-database = "VMwareArchive"
+database = "VMware"
 # group in DT database
 group = "/Emails"
 # current path of this script
@@ -54,9 +54,6 @@ try:
 
     if not proc.returncode == 0:
       exit("Something went wrong importing the e-mail - is DT running?")	
-
-    subject = str(make_header(decode_header(msg['subject']))).replace("\\n", "")
-    # logging.info("Downloading %s",subject)
 
     os.remove(filename)
 
