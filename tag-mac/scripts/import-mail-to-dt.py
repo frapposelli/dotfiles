@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.11
+#!/opt/homebrew/bin/python3
 import email
 from email.header import decode_header
 from email.header import make_header

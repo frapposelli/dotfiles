@@ -1,7 +1,7 @@
 IMAPAccount synology
 Host ocean.rapposelli.org
 User "fabio"
-PassCmd "op read 'op://Private/Synology OCEAN/password'"
+PassCmd "/usr/local/bin/op read --cache --account my.1password.com 'op://Private/Synology OCEAN/password'"
 
 IMAPStore archive-synology
 Account synology
