@@ -50,14 +50,6 @@ alias k=kubectl
 alias g=git
 alias d=docker
 
-if which asdf > /dev/null; status --is-interactive; and source (brew --prefix asdf)/asdf.fish; end
-if which direnv > /dev/null; direnv hook fish | source; end
-if which goenv > /dev/null; status --is-interactive; and source (goenv init -|psub); end
-if which rbenv > /dev/null; status --is-interactive; and source (rbenv init -|psub); end
-if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
-if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
-if which op > /dev/null; status --is-interactive; and source /Users/fabio/.config/op/plugins.sh; end
-
 switch (uname)
 	case "Darwin"
 		switch (uname -p)
@@ -74,6 +66,14 @@ switch (uname)
 		nvm use default --silent
 	case "Linux"
 end
+
+if which asdf > /dev/null; status --is-interactive; and source (brew --prefix asdf)/asdf.fish; end
+if which direnv > /dev/null; direnv hook fish | source; end
+if which goenv > /dev/null; status --is-interactive; and source (goenv init -|psub); end
+if which rbenv > /dev/null; status --is-interactive; and source (rbenv init -|psub); end
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
+if which op > /dev/null; status --is-interactive; and source /Users/fabio/.config/op/plugins.sh; end
 
 fish_add_path /usr/local/opt/binutils/bin
 
