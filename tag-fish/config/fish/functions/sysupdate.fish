@@ -1,5 +1,6 @@
 function sysupdate
   if command -s toilet > /dev/null; toilet -f pagga "sysupdate"; end
+  sudo -v
   if command -s git > /dev/null; and test -d $HOME/.dotfiles
 	if command -s toilet > /dev/null
 		toilet -f wideterm "* updating dotfiles"
