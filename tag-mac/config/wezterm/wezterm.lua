@@ -15,6 +15,31 @@ config.font_size = 13
 -- for example, this selects a Bold, Italic font variant.
 -- config.font =
 --   wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true })
+local mux = wezterm.mux
+wezterm.on("gui-startup", function(cmd)
+    local tab, pane, window = mux.spawn_window(cmd or {})
+    window:gui_window():maximize()
+end)
+
+local act = wezterm.action
+config.keys = {
+  {
+    key = "d",
+    mods = "SHIFT|CMD",
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = "d",
+    mods = "CMD",
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = '`',
+    mods = 'OPT',
+    action = act.ActivatePaneDirection 'Next',
+  },
+}
 
 -- and finally, return the configuration to wezterm
 return config
+

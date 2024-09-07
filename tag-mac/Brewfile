@@ -144,6 +144,7 @@ cask "daisydisk"
 cask "devonthink"
 cask "discord"
 cask "docker"
+cask "font-fira-code"
 cask "font-fontawesome"
 cask "font-meslo-lg-nerd-font"
 cask "istat-menus"
@@ -162,8 +163,5 @@ cask "visual-studio-code"
 cask "vlc"
 cask "wezterm"
 cask "xscreensaver"
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "The Clock", id: 488764545
 mas "The Unarchiver", id: 425424353
