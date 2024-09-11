@@ -26,5 +26,10 @@ end
 function sysupdate_and_die
   sysupdate
   if command -s toilet > /dev/null;toilet -f pagga "shutting down system"; end
-  sudo shutdown -h now
+  graceful_shutdown
+end
+
+function graceful_shutdown
+  sudo shutdown -h +5 &
+  osascript -e 'tell application "System Events" to shut down'
 end
