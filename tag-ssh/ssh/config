@@ -2,15 +2,7 @@ Host *
     controlpath /tmp/ssh_mux_%h_%p_%r
     controlmaster auto
     StrictHostKeyChecking no
-    HostkeyAlgorithms +ssh-rsa
-	PubkeyAcceptedAlgorithms +ssh-rsa
-Host *.eng.vmware.com
-    IdentityFile ~/.ssh/id_rsa_vmware
-    User frapposelli
-Host dbc
-    IdentityFile ~/.ssh/id_rsa_vmware
-    User frapposelli
-    HostName sof4-dbc302.eng.vmware.com
+    PubkeyAcceptedAlgorithms +ssh-rsa
 Host invidia 192.168.66.143
     IdentityFile ~/.ssh/id_ed25519_sk_rk_Home
     IdentityAgent none
