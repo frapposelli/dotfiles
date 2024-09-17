@@ -163,5 +163,4 @@ cask "visual-studio-code"
 cask "vlc"
 cask "wezterm"
 cask "xscreensaver"
-mas "The Clock", id: 488764545
 mas "The Unarchiver", id: 425424353
