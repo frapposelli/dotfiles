@@ -7,6 +7,8 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 config.scrollback_lines = 100000
 
+config.window_close_confirmation = 'NeverPrompt'
+
 -- For example, changing the color scheme:
 config.color_scheme = 'Ayu Mirage'
 
