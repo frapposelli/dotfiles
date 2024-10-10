@@ -1,14 +1,15 @@
 Host *
-    controlpath /tmp/ssh_mux_%h_%p_%r
-    controlmaster auto
-    StrictHostKeyChecking no
-    PubkeyAcceptedAlgorithms +ssh-rsa
+  StrictHostKeyChecking no
+  PubkeyAcceptedAlgorithms +ssh-rsa
 Host invidia 192.168.66.143
-    IdentityFile ~/.ssh/id_ed25519_sk_rk_Home
-    IdentityAgent none
-    User fabio
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Invidia
+  User fabio
+Host gitea gitea.rapposelli.org
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Home
+  IdentityAgent none
+  User fabio
 Host github.com
-    IdentityFile ~/.ssh/id_ed25519_sk_rk_GitHub
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_GitHub
 Host homeassistant.local
-    HostName homeassistant.local
-    User root
+  HostName homeassistant.local
+  User root

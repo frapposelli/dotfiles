@@ -21,10 +21,10 @@ set -g theme_title_use_abbreviated_path yes
 
 # Prompt options
 set -g theme_display_ruby no
-set -g theme_display_virtualenv no
+set -g theme_display_virtualenv yes
 set -g theme_display_vagrant no
 set -g theme_display_vi no
-set -g theme_display_k8s_context no
+set -g theme_display_k8s_context yes
 set -g theme_display_user ssh
 set -g theme_display_jobs_verbose yes
 set -g theme_display_hostname ssh
@@ -64,7 +64,9 @@ switch (uname)
 		end
 		set -x NVM_DIR ~/.nvm
 		nvm use default --silent
+		eval (ssh-agent -c)
 	case "Linux"
+		eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
 if which asdf > /dev/null; status --is-interactive; and source (brew --prefix asdf)/asdf.fish; end
@@ -75,18 +77,4 @@ if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv ini
 if which pyenv > /dev/null; status is-login; and pyenv init --path | source; end
 
 fish_add_path /usr/local/opt/binutils/bin
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/homebrew/Caskroom/miniconda/base/bin" $PATH
-    end
-end
-# <<< conda initialize <<<
 
