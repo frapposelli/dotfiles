@@ -1,0 +1,73 @@
+dock_apps:
+  - name: Arc
+    path: /Applications/Arc.app/
+    position: 1
+  - name: BusyCal
+    path: /Applications/BusyCal.app/
+    position: 2
+  - name: Messages
+    path: /System/Applications/Messages.app/
+    position: 3
+  - name: Maps
+    path: /System/Applications/Maps.app/
+    position: 4
+  - name: Telegram
+    path: /Applications/Telegram.app/
+    position: 5
+  - name: Photos
+    path: /System/Applications/Photos.app/
+    position: 6
+  - name: FaceTime
+    path: /System/Applications/FaceTime.app/
+    position: 7
+  - name: DEVONthink 3
+    path: /Applications/DEVONthink 3.app/
+    position: 8
+  - name: Linear
+    path: /Applications/Linear.app/
+    position: 9
+  - name: 1Password
+    path: /Applications/1Password.app/
+    position: 10
+  - name: Slack
+    path: /Applications/Slack.app/
+    position: 11
+  - name: WezTerm
+    path: /Applications/WezTerm.app/
+    position: 12
+  - name: Obsidian
+    path: /Applications/Obsidian.app/
+    position: 13
+  - name: Reminders
+    path: /System/Applications/Reminders.app/
+    position: 14
+  - name: Notes
+    path: /System/Applications/Notes.app/
+    position: 15
+  - name: Freeform
+    path: /System/Applications/Freeform.app/
+    position: 16
+  - name: Music
+    path: /System/Applications/Music.app/
+    position: 17
+  - name: Visual Studio Code
+    path: /Applications/Visual Studio Code.app/
+    position: 18
+  - name: Podcasts
+    path: /System/Applications/Podcasts.app/
+    position: 19
+  - name: App Store
+    path: /System/Applications/App Store.app/
+    position: 20
+  - name: System Settings
+    path: /System/Applications/System Settings.app/
+    position: 21
+  - name: Plexamp
+    path: /Applications/Plexamp.app/
+    position: 22
+settings:
+  minimize_effect: genie
+  magnification: 0
+  magnification_size: 64
+  icon_size: 48
+  autohide: 0
